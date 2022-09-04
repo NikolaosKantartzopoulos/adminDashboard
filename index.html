@@ -5,13 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="dist/output.css" rel="stylesheet" />
 	</head>
-	<body class="flex flex-row h-screen font-sans w-screen">
-    <div id="leftPanel" class="flex-col  h-full bg-blue-500 px-2 pt-4">
+	<body class="flex flex-col sm:flex-row h-screen font-sans w-screen">
+    <div id="leftPanel" class="flex flex-col  h-full bg-blue-500 px-2 pt-4">
       <div
         id="navBar"
-        class=" flex flex-col text-xl text-white h-2/3 justify-between"
+        class="grid grid-cols-2 sm:flex sm:flex-col text-xl text-white h-2/3 justify-between"
       >
-        <div id="navLogo" class="text-white flex flex-row items-center">              
+        <div id="navLogo" class="col-span-2 justify-center text-white flex flex-row items-center">              
           <img src="images/icons/view-dashboard.png" class="w-20 p-1" />
           <div class="text-3xl text-white">Dashboard</div></div>
         <div id="navTop text-base">
@@ -64,38 +64,37 @@
             </li>
         </div>
       </div>
-      <div id="leftBottomPlaceholder" class="h-1/3"></div>
     </div>
 
-		<main class="bg-slate-200 w-4/5 flex flex-col grow">
-      <div id="mainTop" class="h-1/6 bg-white grid grid-cols-3 grid-rows-2 gap-1 px-2">
-          <div id="searchBar" class="col-start-1 col-span-2 row-start-1 row-span-1  flex flex-row p-5 ">
+		<main class="bg-slate-200 w-full sm:w-4/5 flex flex-col grow">
+      <div id="mainTop" class="flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-2 sm:h-1/6 bg-white  gap-1 px-2">
+          <div id="searchBar" class="sm:col-start-1 sm:col-span-2 sm:row-start-1 sm:row-span-1  flex flex-row p-5 ">
             <img src="images/icons/magnify.png">
             <input type="text" class="rounded-3xl bg-slate-300 grow">
           </div>
-          <div id="profileSection" class="col-start-3 col-span-1 row-start-1 row-span-1 flex flex-row justify-end items-center gap-8  mr-8">
+          <div id="profileSection" class="sm:col-start-3 sm:col-span-1 sm:row-start-1 sm:row-span-1 flex flex-row sm:justify-end justify-around items-center gap-8  mr-8">
             <div id="bellSection"><img src="images/icons/bell-ring-outline.png" class="w-8"></div>
             <div id="profileImageTop"><img src="images/icons/profileImage.png" class="w-16"></div>
             <div id="profileNameTop" class="font-bold">Morgan Oakley</div>
           </div>
-          <div id="welcomeSection" class="col-start-1 col-span-2 row-start-2 row-span-1 flex flex-row content-start items-center px-6 gap-4">
+          <div id="welcomeSection" class="hidden sm:col-start-1 sm:col-span-2 sm:row-start-2 sm:row-span-1 sm:flex sm:flex-row content-start items-center px-6 gap-4">
             <div><img src="images/icons/profileImage.png" class="w-16"></div>
             <div class="font-bold"><p class="text-sm">Hi there,</p><p>Morgan Oakley (@morgan)</p></div>
           </div>
-          <div id="menuButtons" class="mr-8 col-start-3 col-span-1 row-start-2 row-span-1 flex flex-row justify-between items-center gap-1">
-            <button class="bg-blue-500 text-white rounded-2xl px-4 py-1">New</button>
+          <div id="menuButtons" class="m-auto sm:mr-8 sm:col-start-3 sm:col-span-1 sm:row-start-2 sm:row-span-1 flex flex-row justify-between items-center gap-1">
+            <button class="bg-blue-500 text-white rounded-2xl px-4 py-1 my-2">New</button>
             <button class="bg-blue-500 text-white rounded-2xl px-4 py-1">Upload</button>
             <button class="bg-blue-500 text-white rounded-2xl px-4 py-1">Share</button>
 
           </div>
       </div>
-      <div id="mainBottom" class="h-5/6 grid grid-cols-3 gap-4">
+      <div id="mainBottom" class="grid grid-cols-1 sm:grid-cols-3 sm:h-5/6  gap-4">
         <div id="yourProjects" class="col-start-1 col-span-2">
           <h1 class="pt-4 pb-2 px-8">Your Projects</h1>
           <div id="projectsTabs" class="grid grid-cols-2 gap-4 px-4">
             <div class="bg-white shadow-md rounded-lg flex flex-row ">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -109,7 +108,7 @@
             </div>
             <div class="bg-white shadow-md rounded-lg flex flex-row">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -122,7 +121,7 @@
               </div>
             </div>            <div class="bg-white shadow-md rounded-lg flex flex-row">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -135,7 +134,7 @@
               </div>
             </div>            <div class="bg-white shadow-md rounded-lg flex flex-row">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -148,7 +147,7 @@
               </div>
             </div>            <div class="bg-white shadow-md rounded-lg flex flex-row">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -161,7 +160,7 @@
               </div>
             </div>            <div class="bg-white shadow-md rounded-lg flex flex-row">
               <div class="bg-yellow-300 w-2 rounded-tl-xl rounded-bl-xl"></div>
-              <div class="bg-white flex flex-col px-4 py-2">
+              <div class="bg-white flex flex-col px-4 py-2 rounded-lg">
                   <div class="p-4">
                     <h1 class="font-bold">Super Cool Project</h1>
                     <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -176,10 +175,10 @@
           </div>
 
         </div>
-        <div id="rightContentBar" class="sm:grid-col-start-3 col-span-1 flex flex-col justify-start ">
+        <div id="rightContentBar" class="ml-4 sm:grid-col-start-3 col-span-1 flex flex-col justify-start ">
           <div>
             <h1 class="pt-4 pb-2">Announcements</h1>
-            <div id="announementsBoard" class=" bg-white px-4 mr-4 rounded-xl">
+            <div id="announementsBoard" class=" bg-white px-4 mr-4 rounded-xl shadow-md">
               <div class="py-4">
                 <h3>Site Maintenance</h3>
                 <p class="text-slate-500 text-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -198,7 +197,7 @@
           </div>
           <div>
             <p class="pt-4 pb-2">Trending</p>
-            <div id="trendingBoard" class=" bg-white px-4 mr-4 rounded-xl flex flex-col items-start gap-2 py-4">
+            <div id="trendingBoard" class=" bg-white px-4 mr-4 rounded-xl flex flex-col items-start gap-2 py-4  shadow-md">
 
               <div class="flex flow-row justify-start items-center gap-4 mr-4">
                 <img src="images/icons/profileImage.png" class="w-12">
