@@ -6,6 +6,7 @@ https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin
 ### Built using
 
 * Grid and Flex CSS
+* TailwindCSS
 
 ### Project's objective
 
